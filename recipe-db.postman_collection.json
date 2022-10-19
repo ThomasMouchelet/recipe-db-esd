@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "505989b0-0e16-4efa-aacf-77f6428b0c34",
+		"name": "recipe-db",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4543863"
+	},
+	"item": [
+		{
+			"name": "Get all recipes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url_api}}/recipes",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one recipe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_api}}/recipes/1",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"recipes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete recipe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url_api}}/recipes/3",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"recipes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create recipe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Recipe from postman\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_api}}/recipes",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update recipe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Update with postman\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_api}}/recipes/2",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"recipes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url_api",
+			"value": "http://localhost:3000"
+		}
+	]
+}
