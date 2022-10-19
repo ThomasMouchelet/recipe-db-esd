@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  docker_mysql:
+    image: mysql:latest
+    container_name: docker_mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: dockermysql
+      MYSQL_DATABASE: dbmysql
+    ports:
+      - 3306:3306
+  adminer:
+    image: adminer
+    container_name: adminer
+    environment:
+      ADMINER_DESIGN: pepa-linha
+    ports:
+      - 8080:8080
